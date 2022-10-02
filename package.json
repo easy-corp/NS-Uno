@@ -6,9 +6,12 @@
   "dependencies": {
     "@nativescript/core": "~8.3.0",
     "@nativescript/theme": "~3.0.2",
-    "nativescript-vue": "~2.9.0"
+    "nativescript-vue": "~2.9.0",
+    "nativescript-vue-navigator": "^1.2.0"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.0.0",
+    "@nativescript/android": "8.3.1",
     "@nativescript/webpack": "~5.0.6",
     "nativescript-vue-template-compiler": "~2.9.0"
   }
