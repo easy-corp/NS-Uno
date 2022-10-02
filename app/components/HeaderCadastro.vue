@@ -12,6 +12,10 @@
         background-color: #ED1C24;
     }
 
+    #lblUno {
+        color: white;
+    }
+
     #icVoltar {
         margin-left: -60rem; 
     }

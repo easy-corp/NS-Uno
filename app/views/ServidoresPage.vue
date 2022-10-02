@@ -3,10 +3,10 @@
         <HeaderPadrao />
 
         <stackLayout class="layoutServer">
-            <TextField class="textField" hint="IP" editable="true" /> 
-            <TextField class="textField" hint="Porta" editable="true" /> 
+            <TextField v-model="servidor.ip" class="textField" hint="IP" editable="true" /> 
+            <TextField v-model="servidor.porta" class="textField" hint="Porta" editable="true" /> 
 
-            <Button class="btnServidor" text="Entrar no Servidor" @tap="servidor" />
+            <Button class="btnServidor" text="Entrar no Servidor" @tap="conectarServidor" />
         </StackLayout>
     </Page>
 </template>
@@ -44,8 +44,20 @@
             HeaderPadrao
         },
         methods: {
-            servidor() {
-                alert("Entrando no servidor...");
+            conectarServidor() {
+                if (this.servidor.ip === "" || this.servidor.porta === "") {
+                    alert("Todos os dados devem ser preenchidos.");
+                } else {
+                    alert("Entrando no servidor " + this.servidor.ip + "...");
+                }
+            }
+        },
+        data() {
+            return {
+                servidor: {
+                    ip: "",
+                    porta: ""
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 import HomePage from "../../views/HomePage"
 import ServidoresPage from "../../views/ServidoresPage"
 import CadastroPage from "../../views/CadastroPage"
+import PerfilPage from "../../views/PerfilPage"
 
 export const routes = {
     "/home": {
@@ -11,5 +12,8 @@ export const routes = {
     },
     "/cadastro": {
         component: CadastroPage,
+    },
+    "/perfil": {
+        component: PerfilPage,
     },
 }

@@ -5,13 +5,17 @@
             
             <Label row="0" col="1" id="lblUno" text="Uno" />
 
-            <Image row="0" col="2" id="icUsario" src="~/assets/img/icUsuario.png" stretch="fill" />
+            <Image row="0" col="2" id="icUsario" src="~/assets/img/icUsuario.png" stretch="fill" @tap=irPerfil />
         </GridLayout>
     </ActionBar>
 </template>
 <style>
     #headerPadrao {
         background-color: #ED1C24;
+    }
+
+    #lblUno {
+        color: white;
     }
 
     #icVoltar {
@@ -37,6 +41,9 @@
         methods: {
             voltar() {
                 this.$navigator.navigate("/home", { clearHistory: true })
+            },
+            irPerfil() {
+                this.$navigator.navigate("/perfil", { clearHistory: true })
             }
         }
     }
